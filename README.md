@@ -17,3 +17,5 @@ This file have the skills that are required to qualify the first level of shortl
 This file containts the traits expectations for the specific job role (In our projects its Data Analyst).
 This file is give by Domai Experts (In our project we have prepared this file usig our research)
 
+# Forms 
+This is Node-Red flow of Registration, Login and Apply forms.

@@ -19,3 +19,6 @@ This file is give by Domai Experts (In our project we have prepared this file us
 
 # Forms 
 This is Node-Red flow of Registration, Login and Apply forms.
+
+# FAQ Section
+Here in this FAQ section ,applicant can ask the quetions regarding the interview process.

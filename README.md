@@ -10,14 +10,14 @@ Software Bot enabled with Artificial Intelligence on a website, which screens th
 
 4.FAQs about the job and the application process
 
-# Skills Required 
-This file have the skills that are required to qualify the first level of shortlisting. this file would be given by the comapny for specific job role (in our case Data Analyst)
+# Criteria for first level shortlisting
+This file have the basic criteria to qualify the first level of shortlisting.This file would be given by the comapny for specific job role (in our case Data Analyst)
 
 # Personality trait Expectations
 This file containts the traits expectations for the specific job role (In our projects its Data Analyst).
 This file is give by Domai Experts (In our project we have prepared this file usig our research)
 
-# Forms 
+# FORMS 
 This is Node-Red flow of Registration, Login and Apply forms.
 
 # skill-FAQ(1)

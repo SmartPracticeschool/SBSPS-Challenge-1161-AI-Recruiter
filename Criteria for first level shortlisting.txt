@@ -1,7 +1,0 @@
-Criterias for first level of shortlisting-
-1)Total marks percentage of candidate should be greater than 65 in 10th 12th Graduation and Post Graduaction.
-2)Candidate should know atleast 1 tool of each of the following mentioned technology-
-(i)"Analytics tools"=[PowerBi,Tableau,Microsoft Excel,Plotly,Dash]	
-(ii)"Databases":{"SQL":[MySQL,Oracle,Microsoft SQlServer,Postgresql,CouchDb],"No-SQL":[MongoDb,Redis,Casandra]}
-(iii)"Languages":[Python,R,Java,Julia,Scala]
-(iv)"Big Data Ecosystem":[Apache Hadoop,Apache Spark,Apache storm,ceph,Hydra]

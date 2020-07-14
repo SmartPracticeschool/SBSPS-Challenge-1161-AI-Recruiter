@@ -1,0 +1,455 @@
+{
+  "intents": [
+    {
+      "intent": "Greetings",
+      "examples": [
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "hello"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Enquiry",
+      "examples": [
+        {
+          "text": "What will be the next procedure ?"
+        },
+        {
+          "text": "when i will get my application reviewed?"
+        },
+        {
+          "text": "How can i get my interview result?"
+        },
+        {
+          "text": "why this position is open ?"
+        },
+        {
+          "text": "What is application procedure?"
+        },
+        {
+          "text": "How bot interview will be held?"
+        },
+        {
+          "text": "What are the rules?"
+        },
+        {
+          "text": "how long it will take?"
+        },
+        {
+          "text": "what is qualifying criteria?"
+        },
+        {
+          "text": "what are the required skills?"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "hello",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "hi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "good morning",
+          "synonyms": [
+            "gm"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Enquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "result",
+          "synonyms": [
+            "feedback",
+            "status",
+            "results"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "email",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "position",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "next step",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "qualification",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "skills",
+          "synonyms": [
+            "knowledge"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "rules",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "requirements",
+          "synonyms": [
+            "criteria"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "procedure",
+          "synonyms": [
+            "procedures"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "approved",
+          "synonyms": [
+            "reviewed"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We are hiring  more people for this postion as our company is expanding"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1592655359058",
+      "conditions": "@Enquiry:position",
+      "dialog_node": "response_6_1592656219385",
+      "previous_sibling": "response_5_1592656184619"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Wait till you get mail from us,if  you already got the mail then the next procedure is written on the mail ,Thank you!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1592655359058",
+      "conditions": "@Enquiry:(next step)",
+      "dialog_node": "response_3_1592657588810",
+      "previous_sibling": "response_2_1592656646427"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The rules for the interview are the: 1-Information given by you is should be 100% true  ,2-Your answer should be in atleast 100 words"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1592655359058",
+      "conditions": "@Enquiry:rules",
+      "dialog_node": "response_6_1592944711271",
+      "previous_sibling": "response_6_1592733329200"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "After You get the mail from us about your selection ,you will called for human interview "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1592655359058",
+      "conditions": "@Enquiry:(procedure)",
+      "dialog_node": "response_2_1592656646427",
+      "previous_sibling": "response_6_1592656219385"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You will get your result by mail"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1592655359058",
+      "conditions": "@Enquiry:email",
+      "dialog_node": "response_5_1592656184619",
+      "previous_sibling": "response_4_1592655420600"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "These are some technical requirements we want:\n1)-Analytics tools: \"PowerBi\",\"Tableau\",\"Microsoft Excel\",\"Plotly\",\"Dash\"\n\t\n2)-Databases:\n\t\"SQL\":\"MySQL\",\"Oracle\",\"Microsoft SQl\",\"Postgresql\",\"CouchDb\"\n\t\"NoSQL\":\"MongoDb\",\"Redis\",\"Casandra\"\n\t\t\n3)-\"Languages\":\"Python\",\"R\",\"Java\",\"Julia\",\"Scala\"\n\t\n4)-\"Big Data Ecosystem\":\"Hadoop\",\"Apache Spark\",\"Apache storm\",\"ceph\",\"Hydra\"\n\t"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1592655359058",
+      "conditions": "@Enquiry:requirements",
+      "dialog_node": "response_6_1592733329200",
+      "previous_sibling": "response_3_1592657588810"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "BE(IT),BE(cs),Bsc(cs),Msc(BDA),Msc(cs)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1592655359058",
+      "conditions": "@Enquiry:qualification",
+      "dialog_node": "response_10_1592945539109",
+      "previous_sibling": "response_6_1592944711271"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You will get your result in few days by email"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1592655359058",
+      "conditions": "@Enquiry:result",
+      "dialog_node": "response_4_1592655420600"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "good morning"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1592503424759",
+      "conditions": "@Greetings:(good morning)",
+      "dialog_node": "response_4_1592651101559",
+      "previous_sibling": "response_1_1592651025645"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hello"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1592503424759",
+      "conditions": "@Greetings:hello",
+      "dialog_node": "response_1_1592651025645",
+      "previous_sibling": "response_6_1592650931413"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hi"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1592503424759",
+      "conditions": "@Greetings:hi",
+      "dialog_node": "response_6_1592650931413"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "text": {
+          "values": [
+            "I didn't understand. You can try rephrasing.",
+            "Can you reword your statement? I'm not understanding.",
+            "I didn't get your meaning."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_7_1592655359058",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Enquiry",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Enquiry",
+      "dialog_node": "node_7_1592655359058",
+      "previous_sibling": "node_5_1592503424759"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Greetings || @Greetings",
+      "dialog_node": "node_5_1592503424759",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "text": {
+          "values": [
+            "Hello. How can I help you?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above."
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "FAQ",
+  "language": "en",
+  "description": ""
+}

@@ -26,6 +26,11 @@ This is json file of FAQ skill of our assistant.
 # First Level Shortlisting new
 This is .ipynb file , it contains the code for first level shortlsting.
 
-
 #ibmapp file
-This file containts Registration Form , login form , Application form in django
+This file containts Registration Form , login form , Application form in django.
+
+#Interview Chatbot file
+This file containts preview link of Interview chatbot.
+
+# FAQ Chatbot file 
+This file containts preview link of FAQ chatbot.

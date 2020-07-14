@@ -1,0 +1,506 @@
+{
+  "intents": [
+    {
+      "intent": "Interview_questions",
+      "examples": [
+        {
+          "text": "Do you prefer working in a team or on your own ? Why?"
+        },
+        {
+          "text": "If you were to change certain aspects of our business model,how would you do it?"
+        },
+        {
+          "text": "How would you define success in this role?"
+        },
+        {
+          "text": "How you stay motivated if you have 2-3 deadlines to cover?"
+        },
+        {
+          "text": "How often would you like to participate in weekdays outings? Where ?"
+        },
+        {
+          "text": "Why did you leave your last position?"
+        },
+        {
+          "text": "What type of management style do you work the best under?"
+        },
+        {
+          "text": "Describe a specific problem you have encountered in your position?How did you go about solving it?"
+        },
+        {
+          "text": "What is the most stressfull situation you have encountered at work?"
+        },
+        {
+          "text": "How would you keep someone at work takes a lot of leaves?"
+        },
+        {
+          "text": "If someone at work criticize you ,what will be your reaction towards the situation?"
+        },
+        {
+          "text": "What is your greatest achievement till now and why?"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Interview_questions",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "1",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "10",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "11",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "12",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "2",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "3",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "4",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "5",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "6",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "7",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "8",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "9",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "yes",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Done",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How would you define success in this role?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593008107334",
+      "conditions": "@Interview_questions:8",
+      "dialog_node": "response_8_1593778280850",
+      "previous_sibling": "response_9_1593778264561"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What is the most stressfull situation you have encountered at work?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593008107334",
+      "conditions": "@Interview_questions:4",
+      "dialog_node": "response_5_1593778181409",
+      "previous_sibling": "response_6_1593778162249"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How often would you like to participate in weekdays outings? Where ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593008107334",
+      "conditions": "@Interview_questions:9",
+      "dialog_node": "response_8_1593778304642",
+      "previous_sibling": "response_8_1593778280850"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How you stay motivated if you have 2-3 deadlines to cover?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593008107334",
+      "conditions": "@Interview_questions:6",
+      "dialog_node": "response_4_1593778235676",
+      "previous_sibling": "response_4_1593778207016"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What type of management style do you work the best under?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593008107334",
+      "conditions": "@Interview_questions:2",
+      "dialog_node": "response_3_1593778144896",
+      "previous_sibling": "response_3_1593778054115"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank your answers are recorded."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593008107334",
+      "conditions": "@Interview_questions:Done",
+      "dialog_node": "response_6_1593780346548",
+      "previous_sibling": "response_9_1593778336471"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How would you keep someone at work takes a lot of leaves?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593008107334",
+      "conditions": "@Interview_questions:7",
+      "dialog_node": "response_9_1593778264561",
+      "previous_sibling": "response_4_1593778235676"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "If you were to change certain aspects of our business model,how would you do it?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593008107334",
+      "conditions": "@Interview_questions:5",
+      "dialog_node": "response_4_1593778207016",
+      "previous_sibling": "response_5_1593778181409"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "If someone at work criticize you ,what will be your reaction towards the situation?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593008107334",
+      "conditions": "@Interview_questions:yes",
+      "dialog_node": "response_3_1593507131006",
+      "previous_sibling": "node_3_1593506711862"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Why did you leave your last position?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593008107334",
+      "conditions": "@Interview_questions:1",
+      "dialog_node": "response_3_1593778054115",
+      "previous_sibling": "response_3_1593507131006"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " Do you prefer working in a team or on your own ? Why?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593008107334",
+      "conditions": "@Interview_questions:10",
+      "dialog_node": "response_7_1593778318511",
+      "previous_sibling": "response_8_1593778304642"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " What is your greatest achievement till now and why?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593008107334",
+      "conditions": "@Interview_questions:3",
+      "dialog_node": "response_6_1593778162249",
+      "previous_sibling": "response_3_1593778144896"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Describe a specific problem you have encountered in your position?How did you go about solving it?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593008107334",
+      "conditions": "@Interview_questions:11",
+      "dialog_node": "response_9_1593778336471",
+      "previous_sibling": "response_7_1593778318511"
+    },
+    {
+      "type": "standard",
+      "title": "1st question",
+      "parent": "node_5_1593008107334",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Interview_quetions",
+      "dialog_node": "node_3_1593506711862"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "If someone at work criticize you ,what will be your reaction towards the situation?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1593506711862",
+      "conditions": "@Interview_quetions:Done",
+      "dialog_node": "response_7_1593506895481"
+    },
+    {
+      "type": "standard",
+      "title": "Interview_questions",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@Interview_questions",
+      "dialog_node": "node_5_1593008107334",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_5_1593008107334",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello Applicant, Please follow given Guidelines for your interview   :-  1)There are total of 12 questions you have to answer ,all questions are compulsory .  2)To start the interview type 'Yes'.  3)Before giving answer of the question type ( the no. of question ,  eg:- 1 or 2 etc.) And type your answer in the same paragraph . 4)Please follow this steps for better experience     ..Thank you!                                                                                                                             "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Interview",
+  "language": "en",
+  "description": ""
+}

@@ -37,3 +37,9 @@ This file containts preview link of FAQ chatbot.
 
 # AI Recruiter File
 This file contains the PPT Of the project.
+
+# Interview.json File
+This file contains the Interview chatbot  json document.
+
+# FAQ.json File 
+This file contains the FAQ chatbot json document.
